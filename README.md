@@ -13,7 +13,7 @@
     - Touching an item of the list should make appear a details page listing every attributes.
     
   - Bônus: 
-    - Make it beautiful ( good example is Today tab on AppStore app)
+    - Make it beautiful (good example is Today tab on AppStore app)
 
 - What's the minimum viable product of challenge?
  - iOS Application written in Swift, using UIKit framework;
@@ -21,11 +21,11 @@
  - Basic layout (at least need show all data, and be responsible);
 
 - What can be done into MVP:
-  - iOS Application using UIKit;
-  - Application using remote API to make more real-world application;
-  - MVVM Pattern;
-  - Network Layer;
-  - Clean layout following suggestion;
+  - iOS Application using UIKit; ✅
+  - Application using remote API to make more real-world application; ✅
+  - MVVM Pattern; ✅
+  - Network Layer; ✅
+  - Clean layout following suggestion; ✅
   
 - What can be done v.2 after MVP delivery:
   - Unit tests; 
@@ -50,17 +50,15 @@
 - - - 
 
 # Challenge Roadmap for MVP:
-- Configure base project
-  - Create project;
-  - Create main access point;
-  - Configure Pods;
-  - Create mock of API;
-  - Configure Swiftlint;
-  - Import all project assets;
-  - Do the entire base code :)
-
-- Create basic scenes and show entire required information without think about layout.
-
-- Create some layout wireframe.
-
-- Refactor of app thinking about new wireframe proposal.
+  - Configure base project ✅
+  - Create project; ✅
+  - Create main access point; ✅
+  - Configure Pods; ✅
+  - Create mock of API; ✅
+  - Import all project assets; ✅
+  - Create Home Scene; ✅
+  - Create Detail Scene; ✅
+  - Do the entire base code; ✅
+  - Make some code-review; ✅
+  - Make some layout changes to improve presentation; ✅
+  - Share for Review. ✅
