@@ -15,6 +15,9 @@
 		EB0E34CC26DBFBF1004CFB91 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E34CA26DBFBF1004CFB91 /* DetailsViewController.swift */; };
 		EB0E34CD26DBFBF1004CFB91 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0E34CB26DBFBF1004CFB91 /* DetailsViewController.xib */; };
 		EB0E34D326DBFCC3004CFB91 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EB0E34D226DBFCC3004CFB91 /* Alamofire */; };
+		EB0E34D726DC0257004CFB91 /* CoffeeShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E34D626DC0257004CFB91 /* CoffeeShop.swift */; };
+		EB0E34DC26DC029F004CFB91 /* NetworkParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E34DB26DC029F004CFB91 /* NetworkParse.swift */; };
+		EB0E34E126DC02DB004CFB91 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E34E026DC02DB004CFB91 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		EB0E34C426DBFAFB004CFB91 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		EB0E34CA26DBFBF1004CFB91 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		EB0E34CB26DBFBF1004CFB91 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		EB0E34D626DC0257004CFB91 /* CoffeeShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShop.swift; sourceTree = "<group>"; };
+		EB0E34DB26DC029F004CFB91 /* NetworkParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkParse.swift; sourceTree = "<group>"; };
+		EB0E34E026DC02DB004CFB91 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,8 @@
 			children = (
 				EB0E34C026DBFA34004CFB91 /* Sources */,
 				EB0E34BE26DBFA26004CFB91 /* Resources */,
+				EB0E34DA26DC028D004CFB91 /* Helpers */,
+				EB0E34D526DC0245004CFB91 /* Models */,
 				EB0E34C226DBFAD8004CFB91 /* Scenes */,
 				EB0E34B026DBF183004CFB91 /* Info.plist */,
 			);
@@ -97,6 +105,7 @@
 		EB0E34C826DBFB00004CFB91 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				EB0E34E026DC02DB004CFB91 /* HomeViewModel.swift */,
 				EB0E34C326DBFAFB004CFB91 /* HomeViewController.swift */,
 				EB0E34C426DBFAFB004CFB91 /* HomeViewController.xib */,
 			);
@@ -110,6 +119,22 @@
 				EB0E34CB26DBFBF1004CFB91 /* DetailsViewController.xib */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		EB0E34D526DC0245004CFB91 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EB0E34D626DC0257004CFB91 /* CoffeeShop.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EB0E34DA26DC028D004CFB91 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EB0E34DB26DC029F004CFB91 /* NetworkParse.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,8 +215,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB0E34A326DBF17D004CFB91 /* AppDelegate.swift in Sources */,
+				EB0E34E126DC02DB004CFB91 /* HomeViewModel.swift in Sources */,
+				EB0E34D726DC0257004CFB91 /* CoffeeShop.swift in Sources */,
 				EB0E34C526DBFAFB004CFB91 /* HomeViewController.swift in Sources */,
 				EB0E34CC26DBFBF1004CFB91 /* DetailsViewController.swift in Sources */,
+				EB0E34DC26DC029F004CFB91 /* NetworkParse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,20 +7,24 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
     // MARK: Properties
+    var viewModel: HomeViewModel = .init()
     
     // MARK: Outlets
     
     // MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "My Best Coffee"
-        view.backgroundColor = .brown
+        setupUI()
+        viewModel.getCoffeeShopsService()
     }
     
     // MARK: Actions
     
     // MARK: Methods
-
+    private func setupUI() {
+        title = "My Best Coffee"
+        view.backgroundColor = .brown
+    }
 }
