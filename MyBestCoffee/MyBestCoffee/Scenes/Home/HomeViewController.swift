@@ -24,6 +24,11 @@ final class HomeViewController: UIViewController {
     }
     
     // MARK: Actions
+    @objc
+    func switchDidChange(sender: UISwitch!) {
+        let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        keyWindow?.overrideUserInterfaceStyle = sender.isOn ? .dark : .light
+    }
     
     // MARK: Methods
     private func bindEvents() {
@@ -43,6 +48,7 @@ final class HomeViewController: UIViewController {
     private func setupUI() {
         title = "My Best Coffee"
         setupTableView()
+        setupNavigationBarSwitch()
     }
     
     private func setupTableView() {
@@ -51,7 +57,7 @@ final class HomeViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 235
+        tableView.rowHeight = 250
     }
 }
 
@@ -82,6 +88,14 @@ extension HomeViewController {
     private func instanceDetails(of coffeeShop: CoffeeShop) {
         let viewController = DetailsViewController(coffeeShop: coffeeShop)
         navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    private func setupNavigationBarSwitch() {
+        let switchControl = UISwitch()
+        let isDarkMode = traitCollection.userInterfaceStyle != .light
+        switchControl.setOn(isDarkMode, animated: false)
+        switchControl.addTarget(self, action: #selector(switchDidChange(sender:)), for: .valueChanged)
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: switchControl)
     }
 }
 
