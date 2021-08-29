@@ -18,6 +18,10 @@
 		EB0E34D726DC0257004CFB91 /* CoffeeShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E34D626DC0257004CFB91 /* CoffeeShop.swift */; };
 		EB0E34DC26DC029F004CFB91 /* NetworkParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E34DB26DC029F004CFB91 /* NetworkParse.swift */; };
 		EB0E34E126DC02DB004CFB91 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E34E026DC02DB004CFB91 /* HomeViewModel.swift */; };
+		EB0E34EB26DC0754004CFB91 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E34E926DC0754004CFB91 /* HomeTableViewCell.swift */; };
+		EB0E34EC26DC0754004CFB91 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0E34EA26DC0754004CFB91 /* HomeTableViewCell.xib */; };
+		EB0E34F026DC08FA004CFB91 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E34EF26DC08FA004CFB91 /* CustomView.swift */; };
+		EB0E34F326DC0921004CFB91 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E34F226DC0921004CFB91 /* CustomImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		EB0E34D626DC0257004CFB91 /* CoffeeShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShop.swift; sourceTree = "<group>"; };
 		EB0E34DB26DC029F004CFB91 /* NetworkParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkParse.swift; sourceTree = "<group>"; };
 		EB0E34E026DC02DB004CFB91 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		EB0E34E926DC0754004CFB91 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		EB0E34EA26DC0754004CFB91 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		EB0E34EF26DC08FA004CFB91 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		EB0E34F226DC0921004CFB91 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,7 @@
 		EB0E34C826DBFB00004CFB91 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				EB0E34E826DC0741004CFB91 /* Views */,
 				EB0E34E026DC02DB004CFB91 /* HomeViewModel.swift */,
 				EB0E34C326DBFAFB004CFB91 /* HomeViewController.swift */,
 				EB0E34C426DBFAFB004CFB91 /* HomeViewController.xib */,
@@ -132,9 +141,20 @@
 		EB0E34DA26DC028D004CFB91 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				EB0E34EF26DC08FA004CFB91 /* CustomView.swift */,
 				EB0E34DB26DC029F004CFB91 /* NetworkParse.swift */,
+				EB0E34F226DC0921004CFB91 /* CustomImageView.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EB0E34E826DC0741004CFB91 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EB0E34E926DC0754004CFB91 /* HomeTableViewCell.swift */,
+				EB0E34EA26DC0754004CFB91 /* HomeTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +223,7 @@
 				EB0E34AF26DBF183004CFB91 /* LaunchScreen.storyboard in Resources */,
 				EB0E34AC26DBF183004CFB91 /* Assets.xcassets in Resources */,
 				EB0E34C626DBFAFB004CFB91 /* HomeViewController.xib in Resources */,
+				EB0E34EC26DC0754004CFB91 /* HomeTableViewCell.xib in Resources */,
 				EB0E34CD26DBFBF1004CFB91 /* DetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,7 +236,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB0E34A326DBF17D004CFB91 /* AppDelegate.swift in Sources */,
+				EB0E34F326DC0921004CFB91 /* CustomImageView.swift in Sources */,
+				EB0E34F026DC08FA004CFB91 /* CustomView.swift in Sources */,
 				EB0E34E126DC02DB004CFB91 /* HomeViewModel.swift in Sources */,
+				EB0E34EB26DC0754004CFB91 /* HomeTableViewCell.swift in Sources */,
 				EB0E34D726DC0257004CFB91 /* CoffeeShop.swift in Sources */,
 				EB0E34C526DBFAFB004CFB91 /* HomeViewController.swift in Sources */,
 				EB0E34CC26DBFBF1004CFB91 /* DetailsViewController.swift in Sources */,
