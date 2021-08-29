@@ -22,6 +22,9 @@
 		EB0E34EC26DC0754004CFB91 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0E34EA26DC0754004CFB91 /* HomeTableViewCell.xib */; };
 		EB0E34F026DC08FA004CFB91 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E34EF26DC08FA004CFB91 /* CustomView.swift */; };
 		EB0E34F326DC0921004CFB91 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E34F226DC0921004CFB91 /* CustomImageView.swift */; };
+		EB0E350426DC1F22004CFB91 /* StarRatingStackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0E350126DC1F22004CFB91 /* StarRatingStackView.xib */; };
+		EB0E350526DC1F22004CFB91 /* StarRatingStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E350226DC1F22004CFB91 /* StarRatingStackView.swift */; };
+		EB0E350626DC1F22004CFB91 /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E350326DC1F22004CFB91 /* StarRatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		EB0E34EA26DC0754004CFB91 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		EB0E34EF26DC08FA004CFB91 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		EB0E34F226DC0921004CFB91 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		EB0E350126DC1F22004CFB91 /* StarRatingStackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarRatingStackView.xib; sourceTree = "<group>"; };
+		EB0E350226DC1F22004CFB91 /* StarRatingStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarRatingStackView.swift; sourceTree = "<group>"; };
+		EB0E350326DC1F22004CFB91 /* StarRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,7 @@
 		EB0E34BE26DBFA26004CFB91 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EB0E350026DC1F22004CFB91 /* StarRatingView */,
 				EB0E34AB26DBF183004CFB91 /* Assets.xcassets */,
 				EB0E34AD26DBF183004CFB91 /* LaunchScreen.storyboard */,
 			);
@@ -157,6 +164,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		EB0E350026DC1F22004CFB91 /* StarRatingView */ = {
+			isa = PBXGroup;
+			children = (
+				EB0E350326DC1F22004CFB91 /* StarRatingView.swift */,
+				EB0E350226DC1F22004CFB91 /* StarRatingStackView.swift */,
+				EB0E350126DC1F22004CFB91 /* StarRatingStackView.xib */,
+			);
+			path = StarRatingView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -220,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB0E350426DC1F22004CFB91 /* StarRatingStackView.xib in Resources */,
 				EB0E34AF26DBF183004CFB91 /* LaunchScreen.storyboard in Resources */,
 				EB0E34AC26DBF183004CFB91 /* Assets.xcassets in Resources */,
 				EB0E34C626DBFAFB004CFB91 /* HomeViewController.xib in Resources */,
@@ -237,6 +255,8 @@
 			files = (
 				EB0E34A326DBF17D004CFB91 /* AppDelegate.swift in Sources */,
 				EB0E34F326DC0921004CFB91 /* CustomImageView.swift in Sources */,
+				EB0E350626DC1F22004CFB91 /* StarRatingView.swift in Sources */,
+				EB0E350526DC1F22004CFB91 /* StarRatingStackView.swift in Sources */,
 				EB0E34F026DC08FA004CFB91 /* CustomView.swift in Sources */,
 				EB0E34E126DC02DB004CFB91 /* HomeViewModel.swift in Sources */,
 				EB0E34EB26DC0754004CFB91 /* HomeTableViewCell.swift in Sources */,
