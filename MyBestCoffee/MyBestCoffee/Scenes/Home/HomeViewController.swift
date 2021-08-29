@@ -18,12 +18,29 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        bindEvents()
         viewModel.getCoffeeShopsService()
     }
     
     // MARK: Actions
     
     // MARK: Methods
+    private func bindEvents() {
+        viewModel.handleSuccess = { [weak self] in
+            self?.tableView.reloadData()
+        }
+        
+        viewModel.handleFailure = { [weak self] message in
+            self?.showAlert(with: message)
+        }
+        
+        viewModel.shouldProgress = { [weak self] isShowing in
+            let activityIndicator = UIActivityIndicatorView(style: .large)
+            activityIndicator.startAnimating()
+            self?.view.addSubview(activityIndicator)
+        }
+    }
+    
     private func setupUI() {
         title = "My Best Coffee"
         setupTableView()
@@ -36,20 +53,32 @@ final class HomeViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 230
+        tableView.rowHeight = 235
+    }
+    
+    private func showAlert(with message: String) {
+        let alert = UIAlertController(title: "Something went wrong", message: message, preferredStyle: .alert)
+        let tryAgainButton = UIAlertAction(title: "Try again", style: .default) { [weak self] _ in
+            self?.viewModel.getCoffeeShopsService()
+        }
+        alert.addAction(tryAgainButton)
+        present(alert, animated: true, completion: nil)
     }
 }
 
 // MARK: Extensions
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModel.coffeeShops?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as? HomeTableViewCell
-        cell?.labelName.text = "Coffee Name"
-        cell?.labelRating.text = "Rating: 5 Stars"
+        if let coffeShop = viewModel.coffeeShops?[indexPath.row] {
+            cell?.labelName.text = coffeShop.name
+            cell?.labelRating.text = "Rating: \(coffeShop.rating) Stars"
+            cell?.imageCoffeeShop?.image = UIImage(named: coffeShop.photo ?? "placeholder")
+        }
         return cell ?? UITableViewCell()
     }
     

@@ -11,11 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableViewCell" id="KGk-i7-Jjw" customClass="HomeTableViewCell" customModule="MyBestCoffee" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="229"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HomeTableViewCell" id="KGk-i7-Jjw" customClass="HomeTableViewCell" customModule="MyBestCoffee" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="235"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="229"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="235"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fba-8w-ZRf">
@@ -24,7 +24,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="cwc-55-uVe">
                                 <rect key="frame" x="16" y="16" width="288" height="200.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee11" translatesAutoresizingMaskIntoConstraints="NO" id="YSd-r1-yXS">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="YSd-r1-yXS">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="Vok-u4-k5V"/>
@@ -55,6 +55,7 @@
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Fba-8w-ZRf" secondAttribute="bottom" id="RuP-Lo-2Bp"/>
                     <constraint firstAttribute="trailing" secondItem="Fba-8w-ZRf" secondAttribute="trailing" id="X3k-Bi-QL2"/>
                     <constraint firstItem="Fba-8w-ZRf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aep-or-i5a"/>
                     <constraint firstItem="Fba-8w-ZRf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="o4J-km-eI8"/>
@@ -66,11 +67,11 @@
                 <outlet property="labelName" destination="XYl-A1-XUR" id="CHD-se-dre"/>
                 <outlet property="labelRating" destination="SMZ-fW-QlF" id="DAw-UQ-eVK"/>
             </connections>
-            <point key="canvasLocation" x="40.579710144927539" y="127.56696428571428"/>
+            <point key="canvasLocation" x="40.579710144927539" y="129.57589285714286"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="coffee11" width="5021" height="3347"/>
+        <image name="placeholder" width="863" height="1120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
