@@ -9,6 +9,7 @@ import UIKit
 
 final class HomeViewController: UIViewController {
     // MARK: Properties
+    private var progressView: ProgressView?
     private var viewModel: HomeViewModel = .init()
     
     // MARK: Outlets
@@ -35,9 +36,7 @@ final class HomeViewController: UIViewController {
         }
         
         viewModel.shouldProgress = { [weak self] isShowing in
-            let activityIndicator = UIActivityIndicatorView(style: .large)
-            activityIndicator.startAnimating()
-            self?.view.addSubview(activityIndicator)
+            isShowing ? self?.showProgress() : self?.dismissProgress()
         }
     }
     
@@ -53,6 +52,22 @@ final class HomeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 235
+    }
+}
+
+// MARK: Base Controller Methods
+extension HomeViewController {
+    private func showProgress() {
+        progressView = .fromNib()
+        guard let progressView = progressView else { return }
+        view.endEditing(true)
+        view.addSubview(progressView)
+        progressView.frame = view.bounds
+    }
+    
+    private func dismissProgress() {
+        progressView?.removeFromSuperview()
+        progressView = nil
     }
     
     private func showAlert(with message: String) {
