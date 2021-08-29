@@ -53,7 +53,7 @@
   - Configure base project ✅
   - Create project; ✅
   - Create main access point; ✅
-  - Configure Pods; ✅
+  - Configure SPM (Used Lottie and Alamofire); ✅
   - Create mock of API; ✅
   - Import all project assets; ✅
   - Create Home Scene; ✅
