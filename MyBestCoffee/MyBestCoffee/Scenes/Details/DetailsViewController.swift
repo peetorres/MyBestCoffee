@@ -46,7 +46,6 @@ final class DetailsViewController: UIViewController {
         labelName.text = coffeeShop.name
         labelAddress.text = "Address: " + coffeeShop.address
         labelRating.text = "Rating: \(coffeeShop.rating)"
-        viewStarRating.rating = coffeeShop.rating
         labelUserRatings.text = "User Ratings Total: \(coffeeShop.user_ratings_total)"
         viewOpenStatus.backgroundColor = coffeeShop.open_now ? .green : .red
         labelOpenStatus.text =  "The place is \(coffeeShop.open_now ? "open" : "closed") now"

@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fba-8w-ZRf" customClass="CustomView" customModule="MyBestCoffee" customModuleProvider="target">
-                        <rect key="frame" x="16" y="16" width="288" height="207.5"/>
+                        <rect key="frame" x="16" y="16" width="288" height="213.5"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="cwc-55-uVe">
-                                <rect key="frame" x="0.0" y="0.0" width="288" height="200.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cwc-55-uVe">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="205.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee1" translatesAutoresizingMaskIntoConstraints="NO" id="YSd-r1-yXS" customClass="CustomImageView" customModule="MyBestCoffee" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="150"/>
@@ -35,28 +35,40 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starbucks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYl-A1-XUR">
-                                        <rect key="frame" x="6" y="156" width="276" height="20.5"/>
+                                        <rect key="frame" x="6" y="155" width="276" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating: 5 stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMZ-fW-QlF">
-                                        <rect key="frame" x="94.5" y="182.5" width="99" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7af-ah-gBj" customClass="StarRatingView" customModule="MyBestCoffee" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="180.5" width="288" height="25"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="EVP-ea-4bz"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="starColor">
+                                                <color key="value" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="7af-ah-gBj" firstAttribute="leading" secondItem="cwc-55-uVe" secondAttribute="leading" id="7At-Zj-kad"/>
                                     <constraint firstAttribute="trailing" secondItem="XYl-A1-XUR" secondAttribute="trailing" constant="6" id="ICe-2e-9p1"/>
                                     <constraint firstItem="XYl-A1-XUR" firstAttribute="leading" secondItem="cwc-55-uVe" secondAttribute="leading" constant="6" id="MIU-qa-KMr"/>
+                                    <constraint firstAttribute="bottom" secondItem="7af-ah-gBj" secondAttribute="bottom" id="UJA-Za-A5n"/>
+                                    <constraint firstAttribute="trailing" secondItem="7af-ah-gBj" secondAttribute="trailing" id="dqT-vR-V52"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="cwc-55-uVe" secondAttribute="bottom" constant="7" id="4xB-V4-MJc"/>
+                            <constraint firstAttribute="bottom" secondItem="cwc-55-uVe" secondAttribute="bottom" constant="8" id="4xB-V4-MJc"/>
                             <constraint firstItem="cwc-55-uVe" firstAttribute="leading" secondItem="Fba-8w-ZRf" secondAttribute="leading" id="hU0-WT-JJb"/>
                             <constraint firstItem="cwc-55-uVe" firstAttribute="top" secondItem="Fba-8w-ZRf" secondAttribute="top" id="kKz-2K-bvW"/>
                             <constraint firstAttribute="trailing" secondItem="cwc-55-uVe" secondAttribute="trailing" id="z2t-kE-byc"/>
@@ -88,7 +100,7 @@
             <connections>
                 <outlet property="imageCoffeeShop" destination="YSd-r1-yXS" id="OuR-GS-bOD"/>
                 <outlet property="labelName" destination="XYl-A1-XUR" id="CHD-se-dre"/>
-                <outlet property="labelRating" destination="SMZ-fW-QlF" id="DAw-UQ-eVK"/>
+                <outlet property="viewStarRating" destination="7af-ah-gBj" id="UOA-m0-spe"/>
             </connections>
             <point key="canvasLocation" x="40.579710144927539" y="131.25"/>
         </tableViewCell>

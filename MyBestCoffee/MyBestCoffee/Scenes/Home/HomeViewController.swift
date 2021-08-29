@@ -78,10 +78,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as? HomeTableViewCell
-        if let coffeShop = viewModel.coffeeShops?[indexPath.row] {
-            cell?.labelName.text = coffeShop.name
-            cell?.labelRating.text = "Rating: \(coffeShop.rating) Stars"
-            cell?.imageCoffeeShop?.image = UIImage(named: coffeShop.photo ?? "placeholder")
+        if let coffeeShop = viewModel.coffeeShops?[indexPath.row] {
+            cell?.setup(with: coffeeShop)
         }
         return cell ?? UITableViewCell()
     }
