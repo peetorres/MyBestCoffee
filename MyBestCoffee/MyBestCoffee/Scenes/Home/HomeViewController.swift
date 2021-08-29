@@ -44,7 +44,6 @@ final class HomeViewController: UIViewController {
     private func setupUI() {
         title = "My Best Coffee"
         setupTableView()
-        view.backgroundColor = .brown
     }
     
     private func setupTableView() {
@@ -63,6 +62,11 @@ final class HomeViewController: UIViewController {
         }
         alert.addAction(tryAgainButton)
         present(alert, animated: true, completion: nil)
+    }
+    
+    private func instanceDetails(of coffeeShop: CoffeeShop) {
+        let viewController = DetailsViewController()
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
@@ -83,6 +87,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected Row \(indexPath.row)")
+        guard let coffeeShop = viewModel.coffeeShops?[indexPath.row] else { return }
+        instanceDetails(of: coffeeShop)
     }
 }
