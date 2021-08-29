@@ -9,7 +9,7 @@ import UIKit
 
 final class HomeViewController: UIViewController {
     // MARK: Properties
-    var viewModel: HomeViewModel = .init()
+    private var viewModel: HomeViewModel = .init()
     
     // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -65,7 +65,7 @@ final class HomeViewController: UIViewController {
     }
     
     private func instanceDetails(of coffeeShop: CoffeeShop) {
-        let viewController = DetailsViewController()
+        let viewController = DetailsViewController(coffeeShop: coffeeShop)
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
